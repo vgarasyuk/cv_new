@@ -18,8 +18,8 @@
     <div>
       <nav class="nav nav-masthead justify-content-between">
       <nav class="nav nav-masthead justify-content-center float-md-start">
-        <a class="moon mx-1 ms-0 text-start" aria-current="page" id="theme-swith" data-id="light"><i class="bi bi-moon-stars-fill text-primary fa-lg"></i></a>
-        <a class="mx-1 text-start changelang" aria-current="page" data-id="ru"><i class="bi bi-translate text-white fa-lg"></i></a>
+        <a class="moon mx-1 ms-0 text-start" aria-current="page" id="theme-swith" data-label="light"><i class="bi bi-moon-stars-fill text-primary fa-lg"></i></a>
+        <a class="mx-1 text-start changelang" aria-current="page" id="langs" data-label="ru"><i class="bi bi-translate text-white fa-lg"></i></a>
 		  </nav>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link active lang-0" aria-current="page" href="index.html" data-label="Home">Главная</a>
@@ -82,20 +82,7 @@
     <script src="assets/dist/js/jquery.js"></script>
 
 
-<script type="text/javascript">
-jQuery(function($) {
-  $('.changelang').click(function() {
-    var all = ['.lang-0', '.lang-1', '.lang-2', '.lang-3', '.lang-4', '.lang-10', '.lang-11', '.lang-12', '.lang-13', '.lang-14', '.lang-5', '.lang-6', '.lang-7', '.lang-8', '.lang-9'];
-    all.forEach(function(item){
-        var $chng = $(item);
-        var text = $chng.text();
-        var label = $chng.data('label');
-        $chng.text(label).data('label', text);
-        var $chng = $('.lang-');
-        });
-  });
-});
-</script>
+
 	  <script>
 	  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {

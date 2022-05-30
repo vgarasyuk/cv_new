@@ -12,12 +12,9 @@
             }
             $("#theme-swith")[0].innerHTML = '<i class="bi bi-moon-stars-fill text-primary fa-lg"></i>';
             $('#theme-color').attr('content', "#f1f1f1");
-            $('#msapplication-navbutton-color').attr('id', "dark");
+            $('#theme-swith').attr('data-label', "light");
             $('#apple-mobile-web-app-status-bar-style').attr('content', "#f1f1f1");
             $('#brand-logo-img')[0].innerHTML = '<img src="img/logo-large.png" style="height:36px; width:auto;">';
-             
-            var it = $('#theme-swith').attr('data-id');
-               alert(it);
         }
         else {
             $(document.documentElement).attr("data-theme", "dark");
@@ -27,19 +24,101 @@
             }
             $(".moon")[0].innerHTML = '<i class="fa fa-sun-o text-warning fa-lg"></i>';
             $('#theme-color').attr('content', "#10171e");
-            $('#msapplication-navbutton-color').attr('id', "light");
+            $('#theme-swith').attr('data-label', "dark");
             $('#apple-mobile-web-app-status-bar-style').attr('content', "#10171e");
             $('#brand-logo-img')[0].innerHTML = '<img src="img/logo-large-dark.png" style="height:36px; width:auto;">';
-              var it = $('#theme-swith').attr('data-id');
-               alert(it);
         }
     }
 
 
     $('.moon').on('click tap', function () {
-        switch_theme()
+        switch_theme();
+		geturl();
     });
 
     function sleep(ms = 0) {
         return new Promise(r => setTimeout(r, ms));
+    };
+
+function changelang() {
+        let b = $(document.documentElement).attr('data-label');
+        if (b === 'en') {
+            $(document.documentElement).attr("data-label", "ru");
+            try {
+                lang_ru();
+            } catch (f) {
+            }
+            $('#langs').attr('data-label', "ru");
+            $('html').attr('lang', "ru");
+    		var all = ['.lang-0', '.lang-1', '.lang-2', '.lang-3', '.lang-4', '.lang-10', '.lang-11', '.lang-12', '.lang-13', '.lang-14', '.lang-5', '.lang-6', '.lang-7', '.lang-8', '.lang-9'];
+			all.forEach(function(item){
+				var $chng = $(item);
+				var text = $chng.text();
+				var label = $chng.data('label');
+				$chng.text(label).data('label', text);
+				var $chng = $('.lang-');
+			});
+        }
+        else {
+            $(document.documentElement).attr("data-label", "en");
+            try {
+                lang_en();
+            } catch (f) {
+            }
+            $('#langs').attr('data-label', "en");
+            $('html').attr('lang', "en");
+    		var all = ['.lang-0', '.lang-1', '.lang-2', '.lang-3', '.lang-4', '.lang-10', '.lang-11', '.lang-12', '.lang-13', '.lang-14', '.lang-5', '.lang-6', '.lang-7', '.lang-8', '.lang-9'];
+			all.forEach(function(item){
+				var $chng = $(item);
+				var text = $chng.text();
+				var label = $chng.data('label');
+				$chng.text(label).data('label', text);
+				var $chng = $('.lang-');
+			});
+        }
     }
+
+
+    $('.changelang').on('click tap', function () {
+        changelang();
+		geturl();
+    });
+
+    function sleeps(ms = 0) {
+        return new Promiser(l => setTimeout(l, ms));
+    }
+
+
+/* function geturl() {
+        let themes = $('#theme-swith').attr('data-label');
+        let languages = $('#langs').attr('data-label');
+		var append = ['light', 'ru'];
+        if (b === 'en') {
+            $().attr("data-label", "ru");
+            try {
+                set_url();
+            } catch (f) {
+            }
+            $('#lan').attr('data-labe', "ru");
+            $('htm').attr('lan', "ru");
+        }
+       else {
+            $(document.documentElement).attr("data-label", "en");
+            try {
+                lang_en();
+            } catch (f) {
+            }
+            $('#langs').attr('data-label', "en");
+            $('html').attr('lang', "en");
+    		var all = ['.lang-0', '.lang-1', '.lang-2', '.lang-3', '.lang-4', '.lang-10', '.lang-11', '.lang-12', '.lang-13', '.lang-14', '.lang-5', '.lang-6', '.lang-7', '.lang-8', '.lang-9'];
+			all.forEach(function(item){
+				var $chng = $(item);
+				var text = $chng.text();
+				var label = $chng.data('label');
+				$chng.text(label).data('label', text);
+				var $chng = $('.lang-');
+			});
+        }
+    }
+
+*/ 
