@@ -93,7 +93,20 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 	  
 	  
 	  <script>
+window.onload=function(){
+    var params = window.location.search.replace('?','').reduce(
+        function(p,e){
+            var a = e.split('&');
+            p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+            return p;
+        },
+        {}
+    );
 
+alert(params[0]);
+alert(params[1]);
+    
+}
 	  </script>
   </body>
 </html>

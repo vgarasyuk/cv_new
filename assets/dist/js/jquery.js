@@ -89,11 +89,21 @@ function changelang() {
     }
 
 
-/* function geturl() {
+ function geturl() {
         let themes = $('#theme-swith').attr('data-label');
         let languages = $('#langs').attr('data-label');
-		var append = ['light', 'ru'];
-        if (b === 'en') {
+		var appt = 'light';
+		var appl = 'ru';
+        if (append.includes(themes) = True) {
+                continue
+        }
+        if (append.includes(languages) = True) {
+                continue
+        }
+        if (append.includes(themes) = False) {
+                continue
+        }
+        
             $().attr("data-label", "ru");
             try {
                 set_url();
@@ -121,4 +131,3 @@ function changelang() {
         }
     }
 
-*/ 
