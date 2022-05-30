@@ -22,10 +22,10 @@
         <a class="mx-1 text-start changelang" aria-current="page" id="langs" data-label="ru"><i class="bi bi-translate text-white fa-lg"></i></a>
 		  </nav>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active lang-0" aria-current="page" href="index.html" data-label="Home">Главная</a>
-        <a class="nav-link lang-1" href="experience.html" data-label="Experience">Опыт</a>
-        <a class="nav-link lang-2" href="skills.html" data-label="Skills">Навыки</a>
-        <a class="nav-link lang-3" href="about.html" data-label="About">О мне</a>
+        <a class="nav-link active lang-0" aria-current="page" onclick="index()" data-label="Home">Главная</a>
+        <a class="nav-link lang-1" onclick="experience()" data-label="Experience">Опыт</a>
+        <a class="nav-link lang-2" onclick="skills()" data-label="Skills">Навыки</a>
+        <a class="nav-link lang-3" onclick="about()" data-label="About">О мне</a>
       </nav>
       </nav>
     </div>
@@ -150,7 +150,27 @@ var params = window.location.search.replace('?','').split('&').reduce(
     		
         }
 
-}
+};
+          function index(){
+              let bc = $(document.documentElement).attr('data-theme');
+              let bd = $(document.documentElement).attr('data-label');
+              window.location.href='index.html?theme='+bc+'&lang='+bd;
+          };
+          function skills(){
+              let bc = $(document.documentElement).attr('data-theme');
+              let bd = $(document.documentElement).attr('data-label');
+              window.location.href='skills.html?theme='+bc+'&lang='+bd;
+          };
+          function experience(){
+              let bc = $(document.documentElement).attr('data-theme');
+              let bd = $(document.documentElement).attr('data-label');
+              window.location.href='experience.html?theme='+bc+'&lang='+bd;
+          };
+          function about(){
+              let bc = $(document.documentElement).attr('data-theme');
+              let bd = $(document.documentElement).attr('data-label');
+              window.location.href='about.html?theme='+bc+'&lang='+bd;
+          };
 	  </script>
   </body>
 </html>
