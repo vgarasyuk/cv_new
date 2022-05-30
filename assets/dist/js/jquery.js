@@ -50,7 +50,7 @@ function changelang() {
             }
             $('#langs').attr('data-label', "ru");
             $('html').attr('lang', "ru");
-    		var all = ['.lang-0', '.lang-1', '.lang-2', '.lang-3', '.lang-4', '.lang-10', '.lang-11', '.lang-12', '.lang-13', '.lang-14', '.lang-5', '.lang-6', '.lang-7', '.lang-8', '.lang-9'];
+    		var all = ['.lang-0', '.lang-1', '.lang-2', '.lang-3', '.lang-4', '.lang-5', '.lang-6', '.lang-7', '.lang-8', '.lang-9', '.lang-10', '.lang-11', '.lang-12', '.lang-13', '.lang-14', '.lang-15', '.lang-16', '.lang-17', '.lang-18', '.lang-19', '.lang-20', '.lang-21', '.lang-22', '.lang-23', '.lang-24', '.lang-25', '.lang-26', '.lang-27', '.lang-28', '.lang-29', '.lang-30', '.lang-31', '.lang-32', '.lang-33', '.lang-34', '.lang-35', '.lang-36', '.lang-37', '.lang-38', '.lang-39',];
 			all.forEach(function(item){
 				var $chng = $(item);
 				var text = $chng.text();
@@ -67,7 +67,7 @@ function changelang() {
             }
             $('#langs').attr('data-label', "en");
             $('html').attr('lang', "en");
-    		var all = ['.lang-0', '.lang-1', '.lang-2', '.lang-3', '.lang-4', '.lang-10', '.lang-11', '.lang-12', '.lang-13', '.lang-14', '.lang-5', '.lang-6', '.lang-7', '.lang-8', '.lang-9'];
+    		var all = ['.lang-0', '.lang-1', '.lang-2', '.lang-3', '.lang-4', '.lang-5', '.lang-6', '.lang-7', '.lang-8', '.lang-9', '.lang-10', '.lang-11', '.lang-12', '.lang-13', '.lang-14', '.lang-15', '.lang-16', '.lang-17', '.lang-18', '.lang-19', '.lang-20', '.lang-21', '.lang-22', '.lang-23', '.lang-24', '.lang-25', '.lang-26', '.lang-27', '.lang-28', '.lang-29', '.lang-30', '.lang-31', '.lang-32', '.lang-33', '.lang-34', '.lang-35', '.lang-36', '.lang-37', '.lang-38', '.lang-39',];
 			all.forEach(function(item){
 				var $chng = $(item);
 				var text = $chng.text();
