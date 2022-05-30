@@ -18,14 +18,15 @@
     <div>
       <nav class="nav nav-masthead justify-content-between">
       <nav class="nav nav-masthead justify-content-center float-md-start">
-        <a class="moon mx-1 ms-0 text-start" aria-current="page" id="theme-swith" data-id="light"><i class="bi bi-moon-stars-fill text-primary fa-lg"></i></a>
-        <a class="mx-1 text-start changelang" aria-current="page" data-id="ru"><i class="bi bi-translate text-white fa-lg"></i></a>
+        <a class="moon mx-1 ms-0 text-start" aria-current="page" id="theme-swith"><i class="bi bi-moon-stars-fill text-primary fa-lg"></i></a>
+        <a class="mx-1 text-start changelang" aria-current="page"><i class="bi bi-translate text-white fa-lg"></i></a>
 		  </nav>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active lang-0" aria-current="page" href="index.html" data-label="Home">Главная</a>
-        <a class="nav-link lang-1" href="experience.html" data-label="Experience">Опыт</a>
-        <a class="nav-link lang-2" href="skills.html" data-label="Skills">Навыки</a>
-        <a class="nav-link lang-3" href="about.html" data-label="About">О мне</a>
+        <a class="nav-link active lang-0" aria-current="page" href="index.html" data-label="Home"><i class="bi bi-house fa-lg"></i></a>
+        <a class="nav-link lang-1" href="experience.html" data-label="Experience"><i class="bi bi-house fa-lg"></i></a>
+        <a class="nav-link lang-2" href="skills.html" data-label="Skills"><i class="bi bi-house fa-lg"></i></a>
+        <a class="nav-link lang-3" href="about.html" data-label="About"><i class="bi bi-house fa-lg"></i></a>
+        <a class="nav-link lang-3" href="about.html" data-label="About"><i class="bi bi-house fa-lg"></i></a>
       </nav>
       </nav>
     </div>
@@ -101,12 +102,11 @@ jQuery(function($) {
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 });
-	  </script>
-	  
-	  
-	  
-	  <script>
-
+// Записываем параметр "element_id" со значением "value"
+var setTheme = document.getElementById('theme').getAttribute('data-theme');
+          var parameter = localStorage.getAttribute('data-theme');
+          localStorage.setAttribute('data-theme', setTheme);
+          
 	  </script>
   </body>
 </html>
